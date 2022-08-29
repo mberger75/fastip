@@ -15,7 +15,7 @@ function Map({ loc }) {
         >
             <TileLayer
                 attribution=''
-                url='https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png'
+                url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
             />
             <Marker position={position}></Marker>
         </MapContainer>
