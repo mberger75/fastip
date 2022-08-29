@@ -11,6 +11,10 @@ body {
     font-size: 1.3rem;
 }
 
+a {
+    color: inherit;
+}
+
 .App {
     width: 70%;
     margin: 0 auto;
@@ -41,7 +45,6 @@ section {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px dotted #222;
     opacity: 0;
 }
 
@@ -72,6 +75,7 @@ section.visible {
 }
 
 footer {
+    margin-top: 20px;
     padding: 20px 10px;
     border-top: 1px dotted #222;
     text-align: center;
