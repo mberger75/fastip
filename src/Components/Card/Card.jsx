@@ -1,5 +1,5 @@
-function Card({ info }) {
-    const { ip, org, city, postal, region, country, timezone } = info;
+function Card({ data }) {
+    const { ip, org, city, postal, region, country, timezone } = data;
 
     return (
         <div className="card">
