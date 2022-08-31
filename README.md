@@ -8,6 +8,16 @@ Websites about IP Addresses are full of advertising, products to sell and other 
 
 <br>
 
+## Features
+
+A picture paints a thousand words
+
+<br>
+
+<a href="https://fastip.qweit.com/"><img src="./preview.jpg"></a>
+
+<br>
+
 ## Stack
 
 - Vite
@@ -20,16 +30,6 @@ Websites about IP Addresses are full of advertising, products to sell and other 
 
 - api.ipify.org
 - ipinfo.io
-
-<br>
-
-## Features
-
-A picture paints a thousand words
-
-<br>
-
-<a href="https://fastip.qweit.com/"><img src="./preview.jpg"></a>
 
 <br>
 
