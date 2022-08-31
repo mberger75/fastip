@@ -28,7 +28,6 @@ A picture paints a thousand words
 
 ## API
 
-- api.ipify.org
 - ipinfo.io
 
 <br>
