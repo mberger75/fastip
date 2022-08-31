@@ -6,26 +6,29 @@ import Article from './Components/Article';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [info, setInfo] = useState({});
+  const [data, setData] = useState({});
   const [isBlocked, setIsBlocked] = useState(false);
+
+  const API_URL = 'https://ipinfo.io/json?token=5fd3dbf6cf22cc';
+  const options = {
+    'method': 'GET',
+    'Content-Type': 'application/json'
+  }
 
   useEffect(() => {
     (async () => {
       try {
-        const resIp = await fetch('https://api.ipify.org?format=json');
-        const dataIp = await resIp.json();
-  
-        const resInfo = await fetch(`https://ipinfo.io/${dataIp.ip}?token=5fd3dbf6cf22cc`);
-        const dataInfo = await resInfo.json();
-        setInfo(dataInfo);
+        const res = await fetch(API_URL, options);
+        const data = await res.json();
+        setData(data);
         setIsLoading(!isLoading);
       }
       catch(error) {
         setIsBlocked(true);
-        console.log(error);
+        console.error(error);
       }
     })();
-  }, [setInfo]);
+  }, [setData]);
 
   return (
     <div className="App">
@@ -37,8 +40,8 @@ function App() {
       <section className={!isLoading ? 'visible' : ''}>
         {!isLoading &&
           <>
-            <Card info={info} />
-            <Map loc={info.loc} />
+            <Card data={data} />
+            <Map loc={data.loc} />
             <Article />
           </>
         }
